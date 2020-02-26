@@ -26,7 +26,6 @@ let closeNav = () => {
         "right": "-100%"
     }, 300, function () {
 
-
         $(mobNavParent).animate({
             "right": "-100%"
         }, 300)
@@ -53,8 +52,6 @@ let toggleNav = () => {
 };
 
 function currentItem() { // this function isn`t an arrow function because i want to use (this) 
-
-
     $(this).children().css("color", "#f24548") // change the clicked element color
     $(this).siblings().children().css("color", "#404040") // reset all the siblings elements color
 };
@@ -62,9 +59,7 @@ function currentItem() { // this function isn`t an arrow function because i want
 
 // calling functions
 navOpen.addEventListener("click", openNav); // open the nav with the bar icon
-
 navclose.addEventListener("click", closeNav) // close the nav with the X icon
-
 mobNavParent.addEventListener("click", (e) => {
 
     shadowCloseNav(e.target);
@@ -74,13 +69,11 @@ mobNavParent.addEventListener("click", (e) => {
 
 // close the nav if the user resized the screen to prevent any bug just for precautions
 
-window.addEventListener("resize", closeNav)
+// window.addEventListener("resize", closeNav) // hide this temp..
 
 $(window).scroll(toggleNav) // when scroll excute the toggleNav function
 
 $(".mobItem").click(currentItem);
-
-
 
 // _______________________________animate to each section___________________
 
@@ -158,6 +151,7 @@ $(document).ready(function () {
         infinite: true,
         speed: 300,
         slidesToShow: 1,
+        arrows: false
   
 
     });
@@ -360,6 +354,4 @@ $('.team-slider').slick({
           }
         }
       ]
-
-
   });
