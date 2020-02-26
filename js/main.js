@@ -69,7 +69,6 @@ mobNavParent.addEventListener("click", (e) => {
 
 // close the nav if the user resized the screen to prevent any bug just for precautions
 
-// window.addEventListener("resize", closeNav) // hide this temp..
 
 $(window).scroll(toggleNav) // when scroll excute the toggleNav function
 
